@@ -1,0 +1,6 @@
+name: hrit-rag-flow
+inputs:
+  question: string
+outputs:
+  answer: string
+  citations: list
