@@ -1,0 +1,11 @@
+{
+  "nodes": {
+    "test_llm": {
+      "variant_0": {
+        "inputs": {
+          "question": []
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,24 @@
+inputs:
+  question:
+    type: string
+    default: What you can do for me?
+  chat_history:
+    type: list
+outputs:
+  output:
+    type: string
+    reference: ${test_llm.output}
+nodes:
+- name: test_llm
+  type: custom_llm
+  source:
+    type: package_with_prompt
+    tool: promptflow.tools.llm.llm
+    path: test_llm.jinja2
+  inputs:
+    connection: prompt-flow-res
+    api: chat
+    deployment_name: gpt-5.2
+    temperature: 0.2
+    max_tokens: 500
+    question: ${inputs.question}
