@@ -10,15 +10,15 @@
       "y": 444,
       "index": -1
     },
-    "echo": {
-      "x": 140,
-      "y": 310,
-      "index": 0
-    },
     "joke": {
       "x": 140,
       "y": 176,
       "index": 1
+    },
+    "echo": {
+      "x": 140,
+      "y": 310,
+      "index": 0
     }
   },
   "orientation": "Vertical"

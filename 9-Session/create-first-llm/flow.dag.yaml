@@ -16,9 +16,9 @@ nodes:
     tool: promptflow.tools.llm.llm
     path: test_llm.jinja2
   inputs:
-    connection: prompt-flow-res
+    connection: ai-propmtflowrg12121134955832_aoai
     api: chat
-    deployment_name: gpt-5.2
-    temperature: 0.2
-    max_tokens: 500
     question: ${inputs.question}
+    response_format:
+      type: text
+    deployment_name: gpt-5.2-chat

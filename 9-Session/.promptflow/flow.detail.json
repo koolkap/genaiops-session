@@ -1,1 +1,165 @@
-{}
+{
+  "flow_runs": [
+    {
+      "run_id": "fc4117ca-8477-4cb3-ad37-7e86970c6b46_0",
+      "status": "Failed",
+      "error": {
+        "message": "OpenAI API hits NotFoundError: Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}} [Error reference: https://platform.openai.com/docs/guides/error-codes/api-errors]",
+        "messageFormat": "",
+        "messageParameters": {},
+        "referenceCode": "Tool/promptflow.tools.aoai",
+        "code": "UserError",
+        "innerError": {
+          "code": "OpenAIError",
+          "innerError": {
+            "code": "NotFoundError",
+            "innerError": null
+          }
+        },
+        "debugInfo": {
+          "type": "WrappedOpenAIError",
+          "message": "OpenAI API hits NotFoundError: Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}} [Error reference: https://platform.openai.com/docs/guides/error-codes/api-errors]",
+          "stackTrace": "\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"C:\\Users\\ajitk\\AppData\\Roaming\\Python\\Python312\\site-packages\\promptflow\\executor\\flow_executor.py\", line 1034, in _exec\n    output, aggregation_inputs = self._exec_inner_with_trace(\n                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\ajitk\\AppData\\Roaming\\Python\\Python312\\site-packages\\promptflow\\executor\\flow_executor.py\", line 937, in _exec_inner_with_trace\n    output, nodes_outputs = self._traverse_nodes(inputs, context)\n                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\ajitk\\AppData\\Roaming\\Python\\Python312\\site-packages\\promptflow\\executor\\flow_executor.py\", line 1215, in _traverse_nodes\n    nodes_outputs, bypassed_nodes = self._submit_to_scheduler(context, inputs, batch_nodes)\n                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\ajitk\\AppData\\Roaming\\Python\\Python312\\site-packages\\promptflow\\executor\\flow_executor.py\", line 1270, in _submit_to_scheduler\n    return scheduler.execute(self._line_timeout_sec)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\ajitk\\AppData\\Roaming\\Python\\Python312\\site-packages\\promptflow\\executor\\_flow_nodes_scheduler.py\", line 131, in execute\n    raise e\n  File \"C:\\Users\\ajitk\\AppData\\Roaming\\Python\\Python312\\site-packages\\promptflow\\executor\\_flow_nodes_scheduler.py\", line 113, in execute\n    self._dag_manager.complete_nodes(self._collect_outputs(completed_futures))\n                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\ajitk\\AppData\\Roaming\\Python\\Python312\\site-packages\\promptflow\\executor\\_flow_nodes_scheduler.py\", line 160, in _collect_outputs\n    each_node_result = each_future.result()\n                       ^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Python312\\Lib\\concurrent\\futures\\_base.py\", line 449, in result\n    return self.__get_result()\n           ^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Python312\\Lib\\concurrent\\futures\\_base.py\", line 401, in __get_result\n    raise self._exception\n  File \"C:\\Python312\\Lib\\concurrent\\futures\\thread.py\", line 58, in run\n    result = self.fn(*self.args, **self.kwargs)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\ajitk\\AppData\\Roaming\\Python\\Python312\\site-packages\\promptflow\\executor\\_flow_nodes_scheduler.py\", line 181, in _exec_single_node_in_thread\n    result = context.invoke_tool(node, f, kwargs=kwargs)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\ajitk\\AppData\\Roaming\\Python\\Python312\\site-packages\\promptflow\\_core\\flow_execution_context.py\", line 90, in invoke_tool\n    result = self._invoke_tool_inner(node, f, kwargs)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\ajitk\\AppData\\Roaming\\Python\\Python312\\site-packages\\promptflow\\_core\\flow_execution_context.py\", line 201, in _invoke_tool_inner\n    raise e\n  File \"C:\\Users\\ajitk\\AppData\\Roaming\\Python\\Python312\\site-packages\\promptflow\\_core\\flow_execution_context.py\", line 182, in _invoke_tool_inner\n    return f(**kwargs)\n           ^^^^^^^^^^^\n  File \"C:\\Users\\ajitk\\AppData\\Roaming\\Python\\Python312\\site-packages\\promptflow\\tracing\\_trace.py\", line 545, in wrapped\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\ajitk\\AppData\\Roaming\\Python\\Python312\\site-packages\\promptflow\\tools\\common.py\", line 580, in wrapper\n    raise WrappedOpenAIError(e)\n",
+          "innerException": {
+            "type": "NotFoundError",
+            "message": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+            "stackTrace": "Traceback (most recent call last):\n  File \"C:\\Users\\ajitk\\AppData\\Roaming\\Python\\Python312\\site-packages\\promptflow\\tools\\common.py\", line 547, in wrapper\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\ajitk\\AppData\\Roaming\\Python\\Python312\\site-packages\\promptflow\\tools\\aoai.py\", line 172, in chat\n    completion = self._client.chat.completions.create(**params)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\ajitk\\AppData\\Roaming\\Python\\Python312\\site-packages\\promptflow\\tracing\\_integrations\\_openai_injector.py\", line 95, in wrapper\n    return f(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\ajitk\\AppData\\Roaming\\Python\\Python312\\site-packages\\promptflow\\tracing\\_trace.py\", line 545, in wrapped\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\ajitk\\AppData\\Roaming\\Python\\Python312\\site-packages\\openai\\_utils\\_utils.py\", line 286, in wrapper\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\ajitk\\AppData\\Roaming\\Python\\Python312\\site-packages\\openai\\resources\\chat\\completions\\completions.py\", line 1147, in create\n    return self._post(\n           ^^^^^^^^^^^\n  File \"C:\\Users\\ajitk\\AppData\\Roaming\\Python\\Python312\\site-packages\\openai\\_base_client.py\", line 1259, in post\n    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))\n                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\ajitk\\AppData\\Roaming\\Python\\Python312\\site-packages\\openai\\_base_client.py\", line 1047, in request\n    raise self._make_status_error_from_response(err.response) from None\n",
+            "innerException": null
+          }
+        }
+      },
+      "inputs": {
+        "topic": "honda"
+      },
+      "output": null,
+      "metrics": null,
+      "request": null,
+      "parent_run_id": "fc4117ca-8477-4cb3-ad37-7e86970c6b46",
+      "root_run_id": "fc4117ca-8477-4cb3-ad37-7e86970c6b46",
+      "source_run_id": null,
+      "flow_id": "template_standard_flow",
+      "start_time": "2025-12-18T09:56:04.022031Z",
+      "end_time": "2025-12-18T09:56:05.112554Z",
+      "index": 0,
+      "api_calls": [
+        {
+          "name": "flow",
+          "node_name": "flow",
+          "type": "Flow",
+          "start_time": 1766019364.022031,
+          "end_time": 1766019365.112554,
+          "children": [],
+          "system_metrics": {
+            "duration": 1.090523,
+            "prompt_tokens": 0,
+            "completion_tokens": 0,
+            "total_tokens": 0
+          },
+          "inputs": {
+            "topic": "honda"
+          },
+          "output": null,
+          "error": {
+            "message": "OpenAI API hits NotFoundError: Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}} [Error reference: https://platform.openai.com/docs/guides/error-codes/api-errors]",
+            "messageFormat": "",
+            "messageParameters": {},
+            "referenceCode": "Tool/promptflow.tools.aoai",
+            "code": "UserError",
+            "innerError": {
+              "code": "OpenAIError",
+              "innerError": {
+                "code": "NotFoundError",
+                "innerError": null
+              }
+            },
+            "debugInfo": {
+              "type": "WrappedOpenAIError",
+              "message": "OpenAI API hits NotFoundError: Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}} [Error reference: https://platform.openai.com/docs/guides/error-codes/api-errors]",
+              "stackTrace": "\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"C:\\Users\\ajitk\\AppData\\Roaming\\Python\\Python312\\site-packages\\promptflow\\executor\\flow_executor.py\", line 1034, in _exec\n    output, aggregation_inputs = self._exec_inner_with_trace(\n                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\ajitk\\AppData\\Roaming\\Python\\Python312\\site-packages\\promptflow\\executor\\flow_executor.py\", line 937, in _exec_inner_with_trace\n    output, nodes_outputs = self._traverse_nodes(inputs, context)\n                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\ajitk\\AppData\\Roaming\\Python\\Python312\\site-packages\\promptflow\\executor\\flow_executor.py\", line 1215, in _traverse_nodes\n    nodes_outputs, bypassed_nodes = self._submit_to_scheduler(context, inputs, batch_nodes)\n                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\ajitk\\AppData\\Roaming\\Python\\Python312\\site-packages\\promptflow\\executor\\flow_executor.py\", line 1270, in _submit_to_scheduler\n    return scheduler.execute(self._line_timeout_sec)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\ajitk\\AppData\\Roaming\\Python\\Python312\\site-packages\\promptflow\\executor\\_flow_nodes_scheduler.py\", line 131, in execute\n    raise e\n  File \"C:\\Users\\ajitk\\AppData\\Roaming\\Python\\Python312\\site-packages\\promptflow\\executor\\_flow_nodes_scheduler.py\", line 113, in execute\n    self._dag_manager.complete_nodes(self._collect_outputs(completed_futures))\n                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\ajitk\\AppData\\Roaming\\Python\\Python312\\site-packages\\promptflow\\executor\\_flow_nodes_scheduler.py\", line 160, in _collect_outputs\n    each_node_result = each_future.result()\n                       ^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Python312\\Lib\\concurrent\\futures\\_base.py\", line 449, in result\n    return self.__get_result()\n           ^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Python312\\Lib\\concurrent\\futures\\_base.py\", line 401, in __get_result\n    raise self._exception\n  File \"C:\\Python312\\Lib\\concurrent\\futures\\thread.py\", line 58, in run\n    result = self.fn(*self.args, **self.kwargs)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\ajitk\\AppData\\Roaming\\Python\\Python312\\site-packages\\promptflow\\executor\\_flow_nodes_scheduler.py\", line 181, in _exec_single_node_in_thread\n    result = context.invoke_tool(node, f, kwargs=kwargs)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\ajitk\\AppData\\Roaming\\Python\\Python312\\site-packages\\promptflow\\_core\\flow_execution_context.py\", line 90, in invoke_tool\n    result = self._invoke_tool_inner(node, f, kwargs)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\ajitk\\AppData\\Roaming\\Python\\Python312\\site-packages\\promptflow\\_core\\flow_execution_context.py\", line 201, in _invoke_tool_inner\n    raise e\n  File \"C:\\Users\\ajitk\\AppData\\Roaming\\Python\\Python312\\site-packages\\promptflow\\_core\\flow_execution_context.py\", line 182, in _invoke_tool_inner\n    return f(**kwargs)\n           ^^^^^^^^^^^\n  File \"C:\\Users\\ajitk\\AppData\\Roaming\\Python\\Python312\\site-packages\\promptflow\\tracing\\_trace.py\", line 545, in wrapped\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\ajitk\\AppData\\Roaming\\Python\\Python312\\site-packages\\promptflow\\tools\\common.py\", line 580, in wrapper\n    raise WrappedOpenAIError(e)\n",
+              "innerException": {
+                "type": "NotFoundError",
+                "message": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+                "stackTrace": "Traceback (most recent call last):\n  File \"C:\\Users\\ajitk\\AppData\\Roaming\\Python\\Python312\\site-packages\\promptflow\\tools\\common.py\", line 547, in wrapper\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\ajitk\\AppData\\Roaming\\Python\\Python312\\site-packages\\promptflow\\tools\\aoai.py\", line 172, in chat\n    completion = self._client.chat.completions.create(**params)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\ajitk\\AppData\\Roaming\\Python\\Python312\\site-packages\\promptflow\\tracing\\_integrations\\_openai_injector.py\", line 95, in wrapper\n    return f(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\ajitk\\AppData\\Roaming\\Python\\Python312\\site-packages\\promptflow\\tracing\\_trace.py\", line 545, in wrapped\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\ajitk\\AppData\\Roaming\\Python\\Python312\\site-packages\\openai\\_utils\\_utils.py\", line 286, in wrapper\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\ajitk\\AppData\\Roaming\\Python\\Python312\\site-packages\\openai\\resources\\chat\\completions\\completions.py\", line 1147, in create\n    return self._post(\n           ^^^^^^^^^^^\n  File \"C:\\Users\\ajitk\\AppData\\Roaming\\Python\\Python312\\site-packages\\openai\\_base_client.py\", line 1259, in post\n    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))\n                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\ajitk\\AppData\\Roaming\\Python\\Python312\\site-packages\\openai\\_base_client.py\", line 1047, in request\n    raise self._make_status_error_from_response(err.response) from None\n",
+                "innerException": null
+              }
+            }
+          }
+        }
+      ],
+      "name": "",
+      "description": "",
+      "tags": null,
+      "system_metrics": {
+        "duration": 1.090523,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0
+      },
+      "result": null,
+      "upload_metrics": false,
+      "otel_trace_id": null,
+      "message_format": "basic"
+    }
+  ],
+  "node_runs": [
+    {
+      "node": "joke",
+      "flow_run_id": "fc4117ca-8477-4cb3-ad37-7e86970c6b46",
+      "run_id": "fc4117ca-8477-4cb3-ad37-7e86970c6b46_joke_0",
+      "status": "Failed",
+      "inputs": {
+        "deployment_name": "honda",
+        "temperature": 1.0,
+        "max_tokens": 256,
+        "topic": "honda",
+        "_inputs_to_escape": [
+          "deployment_name",
+          "topic"
+        ]
+      },
+      "output": null,
+      "metrics": null,
+      "error": {
+        "message": "OpenAI API hits NotFoundError: Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}} [Error reference: https://platform.openai.com/docs/guides/error-codes/api-errors]",
+        "messageFormat": "",
+        "messageParameters": {},
+        "referenceCode": "Tool/promptflow.tools.aoai",
+        "code": "UserError",
+        "innerError": {
+          "code": "OpenAIError",
+          "innerError": {
+            "code": "NotFoundError",
+            "innerError": null
+          }
+        },
+        "debugInfo": {
+          "type": "WrappedOpenAIError",
+          "message": "OpenAI API hits NotFoundError: Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}} [Error reference: https://platform.openai.com/docs/guides/error-codes/api-errors]",
+          "stackTrace": "\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"C:\\Users\\ajitk\\AppData\\Roaming\\Python\\Python312\\site-packages\\promptflow\\_core\\flow_execution_context.py\", line 90, in invoke_tool\n    result = self._invoke_tool_inner(node, f, kwargs)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\ajitk\\AppData\\Roaming\\Python\\Python312\\site-packages\\promptflow\\_core\\flow_execution_context.py\", line 201, in _invoke_tool_inner\n    raise e\n  File \"C:\\Users\\ajitk\\AppData\\Roaming\\Python\\Python312\\site-packages\\promptflow\\_core\\flow_execution_context.py\", line 182, in _invoke_tool_inner\n    return f(**kwargs)\n           ^^^^^^^^^^^\n  File \"C:\\Users\\ajitk\\AppData\\Roaming\\Python\\Python312\\site-packages\\promptflow\\tracing\\_trace.py\", line 545, in wrapped\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\ajitk\\AppData\\Roaming\\Python\\Python312\\site-packages\\promptflow\\tools\\common.py\", line 580, in wrapper\n    raise WrappedOpenAIError(e)\n",
+          "innerException": {
+            "type": "NotFoundError",
+            "message": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+            "stackTrace": "Traceback (most recent call last):\n  File \"C:\\Users\\ajitk\\AppData\\Roaming\\Python\\Python312\\site-packages\\promptflow\\tools\\common.py\", line 547, in wrapper\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\ajitk\\AppData\\Roaming\\Python\\Python312\\site-packages\\promptflow\\tools\\aoai.py\", line 172, in chat\n    completion = self._client.chat.completions.create(**params)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\ajitk\\AppData\\Roaming\\Python\\Python312\\site-packages\\promptflow\\tracing\\_integrations\\_openai_injector.py\", line 95, in wrapper\n    return f(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\ajitk\\AppData\\Roaming\\Python\\Python312\\site-packages\\promptflow\\tracing\\_trace.py\", line 545, in wrapped\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\ajitk\\AppData\\Roaming\\Python\\Python312\\site-packages\\openai\\_utils\\_utils.py\", line 286, in wrapper\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\ajitk\\AppData\\Roaming\\Python\\Python312\\site-packages\\openai\\resources\\chat\\completions\\completions.py\", line 1147, in create\n    return self._post(\n           ^^^^^^^^^^^\n  File \"C:\\Users\\ajitk\\AppData\\Roaming\\Python\\Python312\\site-packages\\openai\\_base_client.py\", line 1259, in post\n    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))\n                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\ajitk\\AppData\\Roaming\\Python\\Python312\\site-packages\\openai\\_base_client.py\", line 1047, in request\n    raise self._make_status_error_from_response(err.response) from None\n",
+            "innerException": null
+          }
+        }
+      },
+      "parent_run_id": "fc4117ca-8477-4cb3-ad37-7e86970c6b46_0",
+      "start_time": "2025-12-18T09:56:04.029461Z",
+      "end_time": "2025-12-18T09:56:05.100858Z",
+      "index": 0,
+      "api_calls": [],
+      "cached_run_id": null,
+      "cached_flow_run_id": null,
+      "logs": {
+        "stdout": "",
+        "stderr": "[2025-12-18T09:56:05+0000] Exception occurs: NotFoundError: Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}\n"
+      },
+      "system_metrics": {
+        "duration": 1.071397
+      },
+      "result": null,
+      "message_format": "basic"
+    }
+  ]
+}

@@ -3,7 +3,8 @@
     "test_llm": {
       "variant_0": {
         "inputs": {
-          "question": []
+          "question": [],
+          "response_format": []
         }
       }
     }
