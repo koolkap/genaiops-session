@@ -1,0 +1,34 @@
+1. create the repo and clone in the local
+2. create the code for generating the sample csv file
+3. Now add the code and push over the generating
+4. initialzed the DVC install dvc using the pip command creat the requirement file
+    - if there is proble that dvc version is not showing up when typing dvc --version install the setup using chocaltey
+    - also check your environment path for the DVC
+    - do this project level but i recommend setup at global level
+5. dvc init will do two things
+    - .dvc folder
+    - .dvcignore same like .gitignore file to ignore the files
+6. <right now we are using the local setup using the MS Azure right now focus on the local setup>
+7.  mkdir azure to create the folder in the project
+8. Now we want to track the azure folder using the command dvc remote add -d myremote azure
+    - documentation "https://doc.dvc.org/command-reference/remote/default"
+9. now tell dvc to add folder data so that any commit changes will be notified to dvc use command dvc add data/
+10. Error happen because the git is already tracking the folder
+    - git rm -r --cached 'data'
+    - git commit -m "stop tracking data"
+11. Now add the data which dvc add data/ 
+    - this will create the data.dvc which has unique hash id
+12. check the dvc status && git status 
+13. Commit the changes with dvc initialzed with data
+14. Now commit the data from the dvc using the command dvc commit && dvc push
+15. because the azure folder need not to track but we are working on local so showing the untracked file
+    - make the first version of the data
+16. need to add the row for the data
+    - check the dvc status
+17. again do the dvc commit && dvc push
+18. check the git log --oneline 
+    - find the logging for the git version which done
+19. Modify the data && repeat the steps of dvc status && dvc commit && dvc push
+
+
+

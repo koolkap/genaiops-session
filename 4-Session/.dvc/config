@@ -1,0 +1,8 @@
+[core]
+    remote = dvcrepo123
+['remote "myremote"']
+    url = ../azure
+['remote "storagedemo456123"']
+    url = azure://sample/sample_data
+['remote "dvcrepo123"']
+    url = azure://test/sample_data

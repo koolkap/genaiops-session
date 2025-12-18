@@ -1,0 +1,52 @@
+1. create the new branch azure
+2. Install "Microsoft Storage Utility"
+    - go to the portal azure 
+    - click the active subscription
+    - click the resources in the side panel
+    - create '+" icon and click "Storage Account" (it will open the page for the subscription you want to create for the storage account)
+3. Give the unique name for the storage repo or reuse the present one (if working on project we take second option)
+4. Review and create live based on the options available
+5. click the create resources
+6. check the option for the storage browser on the panel left side
+7. click the downlaod for the windows utility tool for the azure browser
+    - make a small comparison with the S3
+8. create the Data Storage >> Container >> add the new container
+8.1 Now before moving to the Access control in the Storage control let's add the member in the list using 
+    - https://entra.microsoft.com/ click on this link
+    - check the user 
+    - add the name & email id 
+    - provide him the unique tenant id for my active subscription
+9. After adding the user to the active subscription ----> Now go to the Access Control (IAM)
+    -- go to the add role assignment for granting the access to the other team member with the storage
+    -- click the members and the select "+ Select Members"
+    -- Select the member(s) which are the part of the project
+10. Now to migrate the dvc local to the "sample" data container for the sotrage account holder "storagedemo456123"
+11. Go to the utility tool on the windows which we downloaded & installed
+12. right click on the storage Accounts 
+    - click on the storage account with the same icon as on the platform Azure
+    - enter the connection info using key or SaS
+        - where to get this go to the "Security + Networking" for your storage account
+        - click the Access key inside it
+        - copy the connection string && storage account
+        - go to windows utitlity GUI tool add this in the required boxes
+13. Voila it start showing the required file and data information 
+        - best part is if you want to remove the access to this end point beacuse of developer left the team or leakeadge or any other reason you can change using the utility tool
+        - compare with the S3 if required how it is done
+14. Now dvc is already tracking the data lets revert this to the initial data
+    - comment the line of the code for the new_row_loc
+15. Now before pushing the data to sample in the storage play with the properties
+    - setup the crud operation by right click (first setup in the policy)
+    - update the policy in the drop down
+16. Get the require SaS token for my present case it is 
+    - ?sv=2025-07-05&spr=https&si=sample-2025-12-03-12%3A53%3A52.594&sr=c&sig=OUqBIwRleV3IC6UMEsPAu1GF%2Bjvaz8HPrgCkmKDTTJE%3D
+    - SaS token always start with '?'
+    - save this in notepad
+17. Now track the dvc to the azure cloud storage
+    - dvc remote add -d <storage name> <path>
+    example
+    - dvc remote add -d storagedemo456123 azure://sample/sample_data
+18. Now directly it won't start speaking 
+    - dvc remote modify --local storagedemo456123 account_name 'storagedemo456123'
+    - dvc remote modify --local storagedemo456123 sas_token '?sv=2025-07-05&spr=https&si=sample-2025-12-03-12%3A53%3A52.594&sr=c&sig=OUqBIwRleV3IC6UMEsPAu1GF%2Bjvaz8HPrgCkmKDTTJE%3D'
+19. dvc push 
+20. dvc pull to get the latest version of the data from the remote server
