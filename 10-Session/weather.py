@@ -1,6 +1,7 @@
 from promptflow import tool
 import requests
-
+# Example API call:
+# api.openweathermap.org/data/2.5/forecast?lat=35&lon=139&appid=959b6a836f775fe65ec9263c8f6bf404 
 # openweathermap.org API: 959b6a836f775fe65ec9263c8f6bf404
 @tool
 def fetch_weather_data(location: str, api_key: str) -> dict:
