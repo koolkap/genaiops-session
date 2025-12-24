@@ -1,0 +1,17 @@
+{
+  "product_id": "CK-002",
+  "name": "Double Chocolate Fudge Cookie",
+  "description": "Decadent chocolate cookies with gooey fudge centers.",
+  "category": "Cookies",
+  "price": 6.25,
+  "availability": "Out of Stock",
+  "ingredients": "flour, cocoa powder, dark chocolate, butter, sugar, eggs",
+  "rating": 4.8,
+  "release_date": "2024-02-05",
+  "tags": [
+    "chocolate",
+    "rich",
+    "popular"
+  ],
+  "image_url": "/images/ck_ck-002.jpg"
+}

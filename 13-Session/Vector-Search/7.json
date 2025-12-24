@@ -1,0 +1,17 @@
+{
+  "product_id": "CK-007",
+  "name": "Matcha Green Tea Cookie",
+  "description": "Earthy matcha-flavored cookies with white chocolate.",
+  "category": "Cookies",
+  "price": 6.99,
+  "availability": "Limited Stock",
+  "ingredients": "flour, butter, matcha powder, white chocolate, eggs",
+  "rating": 4.3,
+  "release_date": "2024-05-02",
+  "tags": [
+    "matcha",
+    "trendy",
+    "premium"
+  ],
+  "image_url": "/images/ck_ck-007.jpg"
+}

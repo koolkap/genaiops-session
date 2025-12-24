@@ -1,0 +1,17 @@
+{
+  "product_id": "CK-013",
+  "name": "Ginger Molasses Cookie",
+  "description": "Chewy cookies with bold ginger flavor.",
+  "category": "Cookies",
+  "price": 5.9,
+  "availability": "In Stock",
+  "ingredients": "molasses, ginger, flour, butter, brown sugar",
+  "rating": 4.3,
+  "release_date": "2023-11-05",
+  "tags": [
+    "spicy",
+    "classic",
+    "chewy"
+  ],
+  "image_url": "/images/ck_ck-013.jpg"
+}

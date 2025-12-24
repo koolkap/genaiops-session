@@ -1,0 +1,17 @@
+{
+  "product_id": "CK-005",
+  "name": "Lemon Zest Cookie",
+  "description": "Refreshing cookies with a burst of lemon zest.",
+  "category": "Cookies",
+  "price": 5.1,
+  "availability": "In Stock",
+  "ingredients": "flour, butter, sugar, lemon zest, eggs, vanilla",
+  "rating": 4.1,
+  "release_date": "2024-04-10",
+  "tags": [
+    "citrus",
+    "fresh",
+    "summer"
+  ],
+  "image_url": "/images/ck_ck-005.jpg"
+}

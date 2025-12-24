@@ -1,0 +1,17 @@
+{
+  "product_id": "CK-003",
+  "name": "Oatmeal Raisin Cookie",
+  "description": "Classic oatmeal cookies loaded with juicy raisins.",
+  "category": "Cookies",
+  "price": 4.99,
+  "availability": "In Stock",
+  "ingredients": "oats, flour, butter, brown sugar, raisins, cinnamon",
+  "rating": 4.2,
+  "release_date": "2023-11-18",
+  "tags": [
+    "classic",
+    "healthy",
+    "fiber-rich"
+  ],
+  "image_url": "/images/ck_ck-003.jpg"
+}

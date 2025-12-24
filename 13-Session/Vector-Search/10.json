@@ -1,0 +1,17 @@
+{
+  "product_id": "CK-010",
+  "name": "Hazelnut Mocha Cookie",
+  "description": "Coffee-infused cookies with roasted hazelnuts.",
+  "category": "Cookies",
+  "price": 6.85,
+  "availability": "In Stock",
+  "ingredients": "flour, butter, coffee extract, hazelnuts, sugar",
+  "rating": 4.6,
+  "release_date": "2024-02-20",
+  "tags": [
+    "coffee",
+    "nutty",
+    "bold"
+  ],
+  "image_url": "/images/ck_ck-010.jpg"
+}

@@ -1,0 +1,17 @@
+{
+  "product_id": "CK-008",
+  "name": "Coconut Macaroon Cookie",
+  "description": "Chewy coconut cookies with toasted flakes.",
+  "category": "Cookies",
+  "price": 5.95,
+  "availability": "In Stock",
+  "ingredients": "coconut flakes, condensed milk, egg whites, vanilla",
+  "rating": 4.0,
+  "release_date": "2023-12-22",
+  "tags": [
+    "coconut",
+    "chewy",
+    "tropical"
+  ],
+  "image_url": "/images/ck_ck-008.jpg"
+}

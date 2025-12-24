@@ -1,0 +1,17 @@
+{
+  "product_id": "CK-011",
+  "name": "Pumpkin Spice Cookie",
+  "description": "Warm spiced cookies with pumpkin puree.",
+  "category": "Cookies",
+  "price": 5.6,
+  "availability": "Seasonal",
+  "ingredients": "pumpkin, flour, cinnamon, nutmeg, butter",
+  "rating": 4.2,
+  "release_date": "2023-10-01",
+  "tags": [
+    "seasonal",
+    "spiced",
+    "fall"
+  ],
+  "image_url": "/images/ck_ck-011.jpg"
+}

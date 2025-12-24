@@ -1,0 +1,17 @@
+{
+  "product_id": "CK-001",
+  "name": "Almond Butter Cookie",
+  "description": "Soft cookies infused with rich almond butter and honey.",
+  "category": "Cookies",
+  "price": 5.49,
+  "availability": "In Stock",
+  "ingredients": "almond flour, butter, honey, eggs, vanilla extract, baking powder",
+  "rating": 4.6,
+  "release_date": "2024-01-12",
+  "tags": [
+    "gluten-free",
+    "premium",
+    "bestseller"
+  ],
+  "image_url": "/images/ck_ck-001.jpg"
+}

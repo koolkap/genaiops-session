@@ -1,0 +1,17 @@
+{
+  "product_id": "CK-015",
+  "name": "Espresso Dark Chocolate Cookie",
+  "description": "Bold espresso cookies with dark chocolate chunks.",
+  "category": "Cookies",
+  "price": 6.95,
+  "availability": "Limited Stock",
+  "ingredients": "espresso powder, dark chocolate, flour, butter",
+  "rating": 4.8,
+  "release_date": "2024-05-12",
+  "tags": [
+    "coffee",
+    "intense",
+    "premium"
+  ],
+  "image_url": "/images/ck_ck-015.jpg"
+}

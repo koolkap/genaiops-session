@@ -1,0 +1,17 @@
+{
+  "product_id": "CK-020",
+  "name": "Orange Cranberry Cookie",
+  "description": "Zesty orange cookies with tart cranberries.",
+  "category": "Cookies",
+  "price": 5.7,
+  "availability": "In Stock",
+  "ingredients": "flour, butter, cranberries, orange zest, sugar",
+  "rating": 4.3,
+  "release_date": "2024-01-08",
+  "tags": [
+    "citrus",
+    "tangy",
+    "holiday"
+  ],
+  "image_url": "/images/ck_ck-020.jpg"
+}

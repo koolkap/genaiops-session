@@ -1,0 +1,17 @@
+{
+  "product_id": "CK-016",
+  "name": "Strawberry Shortcake Cookie",
+  "description": "Soft vanilla cookies with strawberry chunks.",
+  "category": "Cookies",
+  "price": 5.45,
+  "availability": "In Stock",
+  "ingredients": "flour, butter, strawberries, vanilla, sugar",
+  "rating": 4.0,
+  "release_date": "2024-04-02",
+  "tags": [
+    "fruity",
+    "soft",
+    "sweet"
+  ],
+  "image_url": "/images/ck_ck-016.jpg"
+}

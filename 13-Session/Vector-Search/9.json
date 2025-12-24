@@ -1,0 +1,17 @@
+{
+  "product_id": "CK-009",
+  "name": "Salted Caramel Cookie",
+  "description": "Sweet and salty cookies with caramel drizzle.",
+  "category": "Cookies",
+  "price": 6.4,
+  "availability": "In Stock",
+  "ingredients": "flour, butter, sugar, caramel, sea salt, eggs",
+  "rating": 4.7,
+  "release_date": "2024-01-30",
+  "tags": [
+    "sweet-salty",
+    "gourmet",
+    "popular"
+  ],
+  "image_url": "/images/ck_ck-009.jpg"
+}

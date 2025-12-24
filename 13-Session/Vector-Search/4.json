@@ -1,0 +1,17 @@
+{
+  "product_id": "CK-004",
+  "name": "Peanut Butter Crunch Cookie",
+  "description": "Crunchy peanut butter cookies with roasted peanuts.",
+  "category": "Cookies",
+  "price": 5.75,
+  "availability": "In Stock",
+  "ingredients": "peanuts, flour, butter, sugar, eggs, baking soda",
+  "rating": 4.5,
+  "release_date": "2024-03-01",
+  "tags": [
+    "nutty",
+    "crunchy",
+    "energy"
+  ],
+  "image_url": "/images/ck_ck-004.jpg"
+}

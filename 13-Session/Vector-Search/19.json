@@ -1,0 +1,17 @@
+{
+  "product_id": "CK-019",
+  "name": "Banana Nut Cookie",
+  "description": "Moist banana cookies with chopped nuts.",
+  "category": "Cookies",
+  "price": 5.25,
+  "availability": "In Stock",
+  "ingredients": "banana, flour, walnuts, butter, sugar",
+  "rating": 4.1,
+  "release_date": "2023-12-10",
+  "tags": [
+    "banana",
+    "nutty",
+    "soft"
+  ],
+  "image_url": "/images/ck_ck-019.jpg"
+}

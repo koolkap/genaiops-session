@@ -1,0 +1,17 @@
+{
+  "product_id": "CK-018",
+  "name": "Mint Chocolate Cookie",
+  "description": "Cool mint cookies with chocolate chunks.",
+  "category": "Cookies",
+  "price": 5.85,
+  "availability": "In Stock",
+  "ingredients": "flour, butter, mint extract, chocolate, sugar",
+  "rating": 4.2,
+  "release_date": "2024-03-28",
+  "tags": [
+    "minty",
+    "refreshing",
+    "chocolate"
+  ],
+  "image_url": "/images/ck_ck-018.jpg"
+}

@@ -1,0 +1,17 @@
+{
+  "product_id": "CK-017",
+  "name": "Honey Walnut Cookie",
+  "description": "Crunchy cookies sweetened with honey and walnuts.",
+  "category": "Cookies",
+  "price": 6.2,
+  "availability": "In Stock",
+  "ingredients": "walnuts, honey, flour, butter, eggs",
+  "rating": 4.4,
+  "release_date": "2024-02-14",
+  "tags": [
+    "nutty",
+    "natural",
+    "crunchy"
+  ],
+  "image_url": "/images/ck_ck-017.jpg"
+}
