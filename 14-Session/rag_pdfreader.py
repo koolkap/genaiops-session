@@ -6,7 +6,7 @@ from azure.core.credentials import AzureKeyCredential
 from openai import AzureOpenAI
 load_dotenv()
 # Load environment variables
-AZURE_SEARCH_ENDPOINT = os.getenv("AZURE_SEARCH_ENDPOINT")
+AZURE_SEARCH_ENDPOINT =  os.getenv("AZURE_SEARCH_ENDPOINT")
 
 AZURE_SEARCH_INDEX = os.getenv("AZURE_SEARCH_INDEX")
 AZURE_SEARCH_API_KEY = os.getenv("AZURE_SEARCH_API_KEY")
