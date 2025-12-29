@@ -1,0 +1,141 @@
+id: bring_your_own_data_chat_qna
+name: Bring Your Own Data Chat QnA
+inputs:
+  chat_history:
+    type: list
+    default:
+    - inputs:
+        chat_input: Hi
+      outputs:
+        chat_output: Hello! How can I assist you today?
+    - inputs:
+        chat_input: What is Azure compute instance?
+      outputs:
+        chat_output: An Azure Machine Learning compute instance is a fully managed
+          cloud-based workstation for data scientists. It provides a
+          pre-configured and managed development environment in the cloud for
+          machine learning. Compute instances can also be used as a compute
+          target for training and inferencing for development and testing
+          purposes. They have a job queue, run jobs securely in a virtual
+          network environment, and can run multiple small jobs in parallel.
+          Additionally, compute instances support single-node multi-GPU
+          distributed training jobs.
+    is_chat_input: false
+    is_chat_history: true
+  chat_input:
+    type: string
+    default: How can I create one using azureml sdk V2?
+    is_chat_input: true
+outputs:
+  chat_output:
+    type: string
+    reference: ${chat_with_context.output}
+    is_chat_output: true
+nodes:
+- name: modify_query_with_history
+  type: llm
+  source:
+    type: code
+    path: modify_query_with_history.jinja2
+  inputs:
+    deployment_name: gpt-4o
+    temperature: 0
+    top_p: 1
+    max_tokens: 1000
+    presence_penalty: 0
+    frequency_penalty: 0
+    chat_history: ${inputs.chat_history}
+    chat_input: ${inputs.chat_input}
+  provider: AzureOpenAI
+  connection: aifoundryrepp6033706893_aoai
+  api: chat
+  module: promptflow.tools.aoai
+  use_variants: false
+- name: lookup
+  type: python
+  source:
+    type: package
+    tool: promptflow_vectordb.tool.common_index_lookup.search
+  inputs:
+    mlindex_content: >
+      embeddings:
+        api_base: https://aifoundryrepp6033706893.openai.azure.com
+        api_type: azure
+        api_version: 2023-07-01-preview
+        batch_size: '16'
+        connection:
+          id: 
+            /subscriptions/49251aaf-72f7-4fc7-a8de-bad3e34289b5/resourceGroups/ai-foundry-rg/providers/Microsoft.MachineLearningServices/workspaces/ajitkohir-5704/connections/aifoundryrepp6033706893_aoai
+        connection_type: workspace_connection
+        deployment: text-embedding-ada-002
+        dimension: 1536
+        file_format_version: '2'
+        kind: open_ai
+        model: text-embedding-ada-002
+        schema_version: '2'
+      index:
+        api_version: 2024-05-01-preview
+        connection:
+          id: 
+            /subscriptions/49251aaf-72f7-4fc7-a8de-bad3e34289b5/resourceGroups/ai-foundry-rg/providers/Microsoft.MachineLearningServices/workspaces/ajitkohir-5704/connections/azureaisearchrepo
+        connection_type: workspace_connection
+        endpoint: https://azureaisearchrepo.search.windows.net/
+        engine: azure-sdk
+        field_mapping:
+          content: content
+          embedding: contentVector
+          filename: filepath
+          metadata: meta_json_string
+          title: title
+          url: url
+        index: calm-dinner-rt39f0b0gl
+        kind: acs
+        semantic_configuration_name: azureml-default
+      self:
+        path: 
+          azureml://subscriptions/49251aaf-72f7-4fc7-a8de-bad3e34289b5/resourcegroups/ai-foundry-rg/workspaces/ajitkohir-5704/datastores/workspaceblobstore/paths/azureml/f9a47531-94ad-47f1-8736-81176765743d/index/
+        asset_id: 
+          azureml://locations/eastus2/workspaces/df5a1163-e25b-417f-add8-e9e0afd85b29/data/calm-dinner-rt39f0b0gl/versions/1
+    queries: ${modify_query_with_history.output}
+    query_type: Hybrid (vector + keyword)
+    top_k: 2
+  use_variants: false
+- name: generate_prompt_context
+  type: python
+  source:
+    type: code
+    path: generate_prompt_context.py
+  inputs:
+    search_result: ${lookup.output}
+  use_variants: false
+- name: Prompt_variants
+  type: prompt
+  source:
+    type: code
+    path: Prompt_variants.jinja2
+  inputs:
+    contexts: ${generate_prompt_context.output}
+    chat_history: ${inputs.chat_history}
+    chat_input: ${inputs.chat_input}
+  use_variants: false
+- name: chat_with_context
+  type: llm
+  source:
+    type: code
+    path: chat_with_context.jinja2
+  inputs:
+    deployment_name: gpt-4o
+    temperature: 0
+    top_p: 1
+    max_tokens: 1000
+    presence_penalty: 0
+    frequency_penalty: 0
+    prompt_text: ${Prompt_variants.output}
+  provider: AzureOpenAI
+  connection: aifoundryrepp6033706893_aoai
+  api: chat
+  module: promptflow.tools.aoai
+  use_variants: false
+node_variants: {}
+environment:
+  python_requirements_txt: requirements.txt

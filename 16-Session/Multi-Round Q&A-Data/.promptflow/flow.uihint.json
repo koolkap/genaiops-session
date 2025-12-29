@@ -1,0 +1,72 @@
+{
+  "nodes": {
+    "modify_query_with_history": {
+      "variant_0": {
+        "inputs": {},
+        "inputsValue": {}
+      }
+    },
+    "lookup": {
+      "variant_0": {
+        "inputs": {
+          "index_type": [
+            {
+              "value": "Registered Index"
+            }
+          ],
+          "acs_content_field": [],
+          "acs_embedding_field": [],
+          "acs_index_name": [],
+          "acs_metadata_field": [],
+          "embedding_type": [],
+          "embedding_deployment": [],
+          "embedding_model": [],
+          "serverless_embedding_connection": [],
+          "mlindex_asset_id": [
+            {
+              "display_value": "calm-dinner-rt39f0b0gl:1",
+              "value": "azureml://locations/eastus2/workspaces/df5a1163-e25b-417f-add8-e9e0afd85b29/data/calm-dinner-rt39f0b0gl/versions/1"
+            }
+          ],
+          "mongodb_collection": [],
+          "mongodb_connection": [],
+          "mongodb_content_field": [],
+          "mongodb_database": [],
+          "mongodb_embedding_field": [],
+          "mongodb_index_name": [],
+          "pinecone_index_connection": [],
+          "pinecone_index_name": [],
+          "semantic_configuration": [],
+          "query_type": [
+            {
+              "display_value": "Hybrid (vector + keyword)",
+              "value": "Hybrid (vector + keyword)"
+            }
+          ]
+        },
+        "inputsValue": {
+          "index_type": "Registered Index",
+          "mlindex_asset_id": "azureml://locations/eastus2/workspaces/df5a1163-e25b-417f-add8-e9e0afd85b29/data/calm-dinner-rt39f0b0gl/versions/1"
+        }
+      }
+    },
+    "generate_prompt_context": {
+      "variant_0": {
+        "inputs": {},
+        "inputsValue": {}
+      }
+    },
+    "Prompt_variants": {
+      "variant_0": {
+        "inputs": {},
+        "inputsValue": {}
+      }
+    },
+    "chat_with_context": {
+      "variant_0": {
+        "inputs": {},
+        "inputsValue": {}
+      }
+    }
+  }
+}

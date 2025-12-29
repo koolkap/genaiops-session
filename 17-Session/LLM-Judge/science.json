@@ -1,0 +1,82 @@
+[
+  {
+    "Question": "What is the difference between mass and weight?",
+    "ExpectedResponse": "Mass is the amount of matter in an object and is measured in kilograms. It does not change regardless of location. Weight is the force exerted on that mass due to gravity, measured in newtons. For example, a person with a mass of 70 kg has the same mass on Earth and the Moon, but weighs less on the Moon due to weaker gravity."
+  },
+  {
+    "Question": "How does photosynthesis work?",
+    "ExpectedResponse": "Photosynthesis is the process by which green plants, algae, and some bacteria convert light energy into chemical energy. Using chlorophyll, they absorb sunlight and combine carbon dioxide from the air with water from the soil to produce glucose and oxygen. The general equation is 6CO₂ + 6H₂O + light → C₆H₁₂O₆ + 6O₂."
+  },
+  {
+    "Question": "What causes tides on Earth?",
+    "ExpectedResponse": "Tides are caused primarily by the gravitational pull of the Moon and, to a lesser extent, the Sun. The Moon’s gravity pulls water toward it, creating a bulge on the side of Earth facing the Moon, while inertia creates a second bulge on the opposite side. As Earth rotates, these bulges cause high and low tides."
+  },
+  {
+    "Question": "What is the difference between a comet and an asteroid?",
+    "ExpectedResponse": "Asteroids are rocky objects mostly found in the asteroid belt between Mars and Jupiter, composed mainly of metals and silicate rock. Comets are icy bodies that originate from the outer solar system and form a glowing coma and tail when they approach the Sun."
+  },
+  {
+    "Question": "Why is the sky blue?",
+    "ExpectedResponse": "The sky appears blue because of Rayleigh scattering. Molecules in Earth’s atmosphere scatter shorter wavelengths of light (blue and violet) more than longer wavelengths (red). Our eyes are more sensitive to blue light, making the sky appear blue."
+  },
+  {
+    "Question": "What are black holes?",
+    "ExpectedResponse": "A black hole is a region in space where gravity is so strong that nothing, not even light, can escape. They form when very massive stars collapse at the end of their life cycles and are characterized by an event horizon and a central singularity."
+  },
+  {
+    "Question": "How does the greenhouse effect work?",
+    "ExpectedResponse": "The greenhouse effect occurs when gases in Earth’s atmosphere, such as carbon dioxide, methane, and water vapor, trap heat from the Sun. Earth radiates heat as infrared radiation, which is absorbed and re-emitted by greenhouse gases, warming the planet."
+  },
+  {
+    "Question": "What is DNA and why is it important?",
+    "ExpectedResponse": "DNA (deoxyribonucleic acid) is the molecule that carries genetic information in living organisms. It is composed of four nucleotides—adenine, thymine, cytosine, and guanine—which encode instructions for building proteins and passing traits from one generation to the next."
+  },
+  {
+    "Question": "What is the difference between speed and velocity?",
+    "ExpectedResponse": "Speed is a scalar quantity that measures how fast an object moves, regardless of direction. Velocity is a vector quantity that includes both speed and direction."
+  },
+  {
+    "Question": "How does evolution work through natural selection?",
+    "ExpectedResponse": "Evolution by natural selection occurs when organisms with traits better suited to their environment survive and reproduce more successfully. Over generations, these advantageous traits become more common, leading to adaptation and sometimes new species."
+  },
+  {
+    "Question": "What is the periodic table?",
+    "ExpectedResponse": "The periodic table is an organized chart of all known chemical elements arranged by increasing atomic number. Elements are grouped into rows and columns based on similar chemical properties."
+  },
+  {
+    "Question": "How do vaccines work?",
+    "ExpectedResponse": "Vaccines train the immune system to recognize and fight specific pathogens without causing disease. They typically contain weakened or inactivated parts of a virus or bacteria, prompting the production of antibodies and memory cells."
+  },
+  {
+    "Question": "What is plate tectonics?",
+    "ExpectedResponse": "Plate tectonics is the theory that Earth’s lithosphere is divided into large plates that move slowly over the semi-fluid mantle, causing earthquakes, volcanic activity, mountain building, and ocean trench formation."
+  },
+  {
+    "Question": "How do plants absorb nutrients from the soil?",
+    "ExpectedResponse": "Plants absorb nutrients through their roots, mainly as ions dissolved in water. Root hairs increase surface area for absorption, and nutrients are transported through the xylem to different parts of the plant."
+  },
+  {
+    "Question": "What is the difference between prokaryotic and eukaryotic cells?",
+    "ExpectedResponse": "Prokaryotic cells lack a nucleus and membrane-bound organelles, with DNA free-floating in the cytoplasm. Eukaryotic cells have a nucleus and organelles such as mitochondria and chloroplasts."
+  },
+  {
+    "Question": "How do stars produce energy?",
+    "ExpectedResponse": "Stars produce energy through nuclear fusion, primarily converting hydrogen into helium in their cores. This process releases vast amounts of energy as light and heat."
+  },
+  {
+    "Question": "What is the water cycle?",
+    "ExpectedResponse": "The water cycle is the continuous movement of water on Earth through evaporation, condensation, precipitation, infiltration, and runoff. The cycle is powered by the Sun’s energy."
+  },
+  {
+    "Question": "Why do objects fall to the ground?",
+    "ExpectedResponse": "Objects fall to the ground due to gravity, the force of attraction between masses. On Earth, gravity accelerates objects downward at about 9.8 m/s²."
+  },
+  {
+    "Question": "What is the difference between renewable and non-renewable energy?",
+    "ExpectedResponse": "Renewable energy comes from sources that are naturally replenished, such as solar, wind, and geothermal power. Non-renewable energy comes from finite sources like coal, oil, and natural gas."
+  },
+  {
+    "Question": "What is an atom made of?",
+    "ExpectedResponse": "An atom consists of protons and neutrons in the nucleus, with electrons orbiting around it. Protons determine the element’s identity, while electrons influence chemical behavior."
+  }
+]
