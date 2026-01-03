@@ -1,0 +1,102 @@
+{
+  "flow_runs": [
+    {
+      "run_id": "a9ec4841-7fb3-415f-b6e1-3d6c1277c479_0",
+      "status": "Completed",
+      "error": null,
+      "inputs": {
+        "chat_history": [],
+        "question": "Why sky is blue"
+      },
+      "output": {
+        "answer": "The sky appears blue due to a phenomenon known as **Rayleigh scattering**. This occurs because the Earth's atmosphere is made up of gases and tiny particles that scatter sunlight in all directions. \n\nSunlight, or white light, is made up of a spectrum of colors, each with different wavelengths. Blue light has a shorter wavelength and higher energy compared to other colors like red or yellow. Because of its shorter wavelength, blue light is scattered much more by the molecules in the atmosphere compared to longer wavelengths, like red.\n\nHere’s a simple breakdown of why the sky is blue:\n\n1. **Scattering of sunlight:** When sunlight enters Earth's atmosphere, it interacts with air molecules and particles. The shorter wavelengths (blue and violet) are scattered much more effectively than the longer wavelengths (red, orange, and yellow).\n\n2. **Why blue, not violet?** Although violet light is scattered even more than blue light, our eyes are more sensitive to blue light and less sensitive to violet. Additionally, some of the violet light is absorbed by the upper atmosphere, so the blue light dominates what we see.\n\n3. **Position of the sun:** The intensity of this scattering effect depends on the position of the sun. At midday, sunlight travels a shorter path through the atmosphere, so the"
+      },
+      "metrics": null,
+      "request": null,
+      "parent_run_id": "a9ec4841-7fb3-415f-b6e1-3d6c1277c479",
+      "root_run_id": "a9ec4841-7fb3-415f-b6e1-3d6c1277c479",
+      "source_run_id": null,
+      "flow_id": "template_chat_flow",
+      "start_time": "2026-01-03T18:48:30.988048Z",
+      "end_time": "2026-01-03T18:48:34.424486Z",
+      "index": 0,
+      "api_calls": [
+        {
+          "name": "flow",
+          "node_name": "flow",
+          "type": "Flow",
+          "start_time": 1767433710.988048,
+          "end_time": 1767433714.424486,
+          "children": [],
+          "system_metrics": {
+            "duration": 3.436438,
+            "prompt_tokens": 0,
+            "completion_tokens": 0,
+            "total_tokens": 0
+          },
+          "inputs": {
+            "chat_history": [],
+            "question": "Why sky is blue"
+          },
+          "output": {
+            "answer": "The sky appears blue due to a phenomenon known as **Rayleigh scattering**. This occurs because the Earth's atmosphere is made up of gases and tiny particles that scatter sunlight in all directions. \n\nSunlight, or white light, is made up of a spectrum of colors, each with different wavelengths. Blue light has a shorter wavelength and higher energy compared to other colors like red or yellow. Because of its shorter wavelength, blue light is scattered much more by the molecules in the atmosphere compared to longer wavelengths, like red.\n\nHere’s a simple breakdown of why the sky is blue:\n\n1. **Scattering of sunlight:** When sunlight enters Earth's atmosphere, it interacts with air molecules and particles. The shorter wavelengths (blue and violet) are scattered much more effectively than the longer wavelengths (red, orange, and yellow).\n\n2. **Why blue, not violet?** Although violet light is scattered even more than blue light, our eyes are more sensitive to blue light and less sensitive to violet. Additionally, some of the violet light is absorbed by the upper atmosphere, so the blue light dominates what we see.\n\n3. **Position of the sun:** The intensity of this scattering effect depends on the position of the sun. At midday, sunlight travels a shorter path through the atmosphere, so the"
+          },
+          "error": null
+        }
+      ],
+      "name": "",
+      "description": "",
+      "tags": null,
+      "system_metrics": {
+        "duration": 3.436438,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0
+      },
+      "result": {
+        "answer": "The sky appears blue due to a phenomenon known as **Rayleigh scattering**. This occurs because the Earth's atmosphere is made up of gases and tiny particles that scatter sunlight in all directions. \n\nSunlight, or white light, is made up of a spectrum of colors, each with different wavelengths. Blue light has a shorter wavelength and higher energy compared to other colors like red or yellow. Because of its shorter wavelength, blue light is scattered much more by the molecules in the atmosphere compared to longer wavelengths, like red.\n\nHere’s a simple breakdown of why the sky is blue:\n\n1. **Scattering of sunlight:** When sunlight enters Earth's atmosphere, it interacts with air molecules and particles. The shorter wavelengths (blue and violet) are scattered much more effectively than the longer wavelengths (red, orange, and yellow).\n\n2. **Why blue, not violet?** Although violet light is scattered even more than blue light, our eyes are more sensitive to blue light and less sensitive to violet. Additionally, some of the violet light is absorbed by the upper atmosphere, so the blue light dominates what we see.\n\n3. **Position of the sun:** The intensity of this scattering effect depends on the position of the sun. At midday, sunlight travels a shorter path through the atmosphere, so the"
+      },
+      "upload_metrics": false,
+      "otel_trace_id": null,
+      "message_format": "basic"
+    }
+  ],
+  "node_runs": [
+    {
+      "node": "chat",
+      "flow_run_id": "a9ec4841-7fb3-415f-b6e1-3d6c1277c479",
+      "run_id": "a9ec4841-7fb3-415f-b6e1-3d6c1277c479_chat_0",
+      "status": "Completed",
+      "inputs": {
+        "deployment_name": "gpt-4o",
+        "max_tokens": 256,
+        "temperature": 0.7,
+        "chat_history": [],
+        "question": "Why sky is blue",
+        "_inputs_to_escape": [
+          "chat_history",
+          "question"
+        ]
+      },
+      "output": "The sky appears blue due to a phenomenon known as **Rayleigh scattering**. This occurs because the Earth's atmosphere is made up of gases and tiny particles that scatter sunlight in all directions. \n\nSunlight, or white light, is made up of a spectrum of colors, each with different wavelengths. Blue light has a shorter wavelength and higher energy compared to other colors like red or yellow. Because of its shorter wavelength, blue light is scattered much more by the molecules in the atmosphere compared to longer wavelengths, like red.\n\nHere’s a simple breakdown of why the sky is blue:\n\n1. **Scattering of sunlight:** When sunlight enters Earth's atmosphere, it interacts with air molecules and particles. The shorter wavelengths (blue and violet) are scattered much more effectively than the longer wavelengths (red, orange, and yellow).\n\n2. **Why blue, not violet?** Although violet light is scattered even more than blue light, our eyes are more sensitive to blue light and less sensitive to violet. Additionally, some of the violet light is absorbed by the upper atmosphere, so the blue light dominates what we see.\n\n3. **Position of the sun:** The intensity of this scattering effect depends on the position of the sun. At midday, sunlight travels a shorter path through the atmosphere, so the",
+      "metrics": null,
+      "error": null,
+      "parent_run_id": "a9ec4841-7fb3-415f-b6e1-3d6c1277c479_0",
+      "start_time": "2026-01-03T18:48:30.988048Z",
+      "end_time": "2026-01-03T18:48:34.424486Z",
+      "index": 0,
+      "api_calls": [],
+      "cached_run_id": null,
+      "cached_flow_run_id": null,
+      "logs": {
+        "stdout": "",
+        "stderr": ""
+      },
+      "system_metrics": {
+        "duration": 3.436438
+      },
+      "result": "The sky appears blue due to a phenomenon known as **Rayleigh scattering**. This occurs because the Earth's atmosphere is made up of gases and tiny particles that scatter sunlight in all directions. \n\nSunlight, or white light, is made up of a spectrum of colors, each with different wavelengths. Blue light has a shorter wavelength and higher energy compared to other colors like red or yellow. Because of its shorter wavelength, blue light is scattered much more by the molecules in the atmosphere compared to longer wavelengths, like red.\n\nHere’s a simple breakdown of why the sky is blue:\n\n1. **Scattering of sunlight:** When sunlight enters Earth's atmosphere, it interacts with air molecules and particles. The shorter wavelengths (blue and violet) are scattered much more effectively than the longer wavelengths (red, orange, and yellow).\n\n2. **Why blue, not violet?** Although violet light is scattered even more than blue light, our eyes are more sensitive to blue light and less sensitive to violet. Additionally, some of the violet light is absorbed by the upper atmosphere, so the blue light dominates what we see.\n\n3. **Position of the sun:** The intensity of this scattering effect depends on the position of the sun. At midday, sunlight travels a shorter path through the atmosphere, so the",
+      "message_format": "basic"
+    }
+  ]
+}
