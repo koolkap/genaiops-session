@@ -1,0 +1,21 @@
+$schema: https://azuremlschemas.azureedge.net/promptflow/latest/Flow.schema.json
+environment:
+  python_requirements_txt: requirements.txt
+inputs:
+  number_1:
+    type: int
+  number_2:
+    type: int
+outputs:
+  output_prompt:
+    type: string
+    reference: ${math.output}
+nodes:
+- name: math
+  type: python
+  source:
+    type: code
+    path: math.py
+  inputs:
+    input1: ${inputs.number_1}
+    input2: ${inputs.number_2}
