@@ -1,0 +1,20 @@
+{
+  "name": "agent",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cli": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@azure/ai-agents": "^1.1.0",
+    "@azure/core-util": "^1.13.0",
+    "@azure/cosmos": "^4.5.0",
+    "@azure/identity": "^4.11.1",
+    "dotenv": "^17.2.1",
+    "express": "^5.1.0"
+  }
+}
