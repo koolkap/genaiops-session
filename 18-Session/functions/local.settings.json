@@ -1,0 +1,10 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "DefaultEndpointsProtocol=https;AccountName=storagedemoagent;AccountKey=G7BdDHc/blsmR1tfDIf4RalBiTEJBmQzHubE/Hgxy7TSUuI6EdEbDe82yrKQAIQWHikgQzXu5Orq+AStNyJ9ZQ==;EndpointSuffix=core.windows.net",
+    "COSMOS_DB_ENDPOINT": "https://cosmosdbagent.documents.azure.com:443/",
+    "COSMOS_DB_KEY": "9wxgQZzahk4BUrhTZqf61A9YsHp2KWcfX2d1syN617piHKoK1uNGhOdEIafbadbNFk9oMl0bxFCbACDbMp4Msw==",
+    "LOGIC_APP_ENDPOINT": "https://prod-18.eastus2.logic.azure.com:443/workflows/22d54d7c271746a5bafe5eb3aa0dbf0d/triggers/When_an_HTTP_request_is_received/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2FWhen_an_HTTP_request_is_received%2Frun&sv=1.0&sig=ywGUIV-UTfPRd9dUZ5XOLCABdlpaZK1e7gn4R-vo45E",
+    "FUNCTIONS_WORKER_RUNTIME": "node"
+  }
+}

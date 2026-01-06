@@ -60,12 +60,66 @@ Install the cli tool
 
 18. Now add the environment variable same with local setting json
 
-19. in cosmo db add the data explorer one more time add the item in the reminder for referesh and our function take new data
+19. in cosmo db add the data explorer one more time add the item in the reminder for referesh and our function take new data (you see the prior message send is true and now this we make false)
 
 20. now push our function to the server use the following command
 
-func azure functionapp publish func-email-agent
+func azure functionapp publish <name if the func whcih we created on the gui portal>
+
+func azure functionapp publish funcapp-demo-agent-reminder
 
 21. start the logging 
 
-func azure functionapp logstream func-email-agent
+func azure functionapp logstream <nameof functionapp>
+
+22. now create the agent on foundry
+
+23. deploy the model
+
+24. create folder agent and add code
+
+25. run the npm init to create the package file
+
+26. package change the type to module 
+
+27. create agent.js in the folder and copy paste the code
+    copy index.js as entry point also
+
+28. Go to overview and copy the endpoint and model name
+
+29. copy the endpoint and copy the model name 
+
+30. install this npm packages 
+
+npm install @azure/ai-agents @azure/core-util @azure/cosmos @azure/identity dotenv express
+
+31. creat the server.js  copy the code
+
+updat the package.json with the start in script 
+
+32. install express server
+
+33. {"message": "What you can do?"} add this in raw  body and hit localhost:3000/chat with type json
+
+34. create folder tools in the agent folder, and create functionToolExecutor.js
+
+35. in the agent.js file import functionToolExecutor 
+add the require methods and add the tools to the createAgent function
+
+36. add requires_action method in the agent.js
+
+37. add new function defination 
+
+sendEmailVerification 
+
+38. change the creatagent instruction 
+
+instructions:
+        "You are a Reminder Agent that schedules emails to be sent at a future date for a user. You send an email verification when a user asks you to remind them of something and provides their email address.",
+
+
+39. Now add the verification code snnippet 
+
+40. now we have scuucesfllu created our email agent going forward you can add function like scheduling or user action based posting
+
+41. also you can create the web app and deploy this solution as GPT agent with UI
