@@ -1,3 +1,10 @@
 {
-    "python.terminal.activateEnvironment": true
+    "python.terminal.activateEnvironment": true,
+    "azureFunctions.deploySubpath": "18-Session",
+    "azureFunctions.postDeployTask": "npm install (functions)",
+    "azureFunctions.projectLanguage": "JavaScript",
+    "azureFunctions.projectRuntime": "~4",
+    "debug.internalConsoleOptions": "neverOpen",
+    "azureFunctions.projectLanguageModel": 4,
+    "azureFunctions.preDeployTask": "npm prune (functions)"
 }
